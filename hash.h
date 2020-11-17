@@ -40,5 +40,5 @@ public:
     //        “BCABA” –>  ‘B’
     //        “ABC”  NULL
 
-
+};
 #endif // HASH_H_INCLUDED
