@@ -28,7 +28,11 @@ int hash1::HASH(string cle)
 
     return index;
 }
-
+void hash1::afficherItem(){
+    for (int index=0;index< tailleTableau ;index++){
+        afficherItemsDansIndex(index);
+    }
+};
 hash1::hash1(){
      for (int i = 0; i<tailleTableau; i++){
         HashTable[i] = new item;

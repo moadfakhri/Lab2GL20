@@ -26,10 +26,10 @@ class hash1{
 
 
         //void ajouterItem(string nom, string tel);
-        //void afficherItem();
+        void afficherItem();
 
         //int  nombreItems(int index);
-        //void afficherItemsDansIndex(int index); // les items qui ont le même resultat de hashage et qui sont empilés
+        void afficherItemsDansIndex(int index); // les items qui ont le même resultat de hashage et qui sont empilés
         //void chercherItem(string nom);
         //void supprimerItem(string nom);
 
