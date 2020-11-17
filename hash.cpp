@@ -41,3 +41,15 @@ hash1::hash1(){
         HashTable[i]->next = NULL;
      }
 }
+
+int hash1::nombreItems(int index) {
+
+    int conteur = 0;
+    item* currentItem = HashTable[index];
+
+    while (currentItem != NULL) {
+        currentItem = currentItem -> next;
+        conteur++;
+    }
+    return conteur;
+}
