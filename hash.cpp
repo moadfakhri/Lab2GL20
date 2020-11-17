@@ -70,17 +70,6 @@ hash1::hash1()
     }
 }
 
-int hash1::nombreItems(int index) {
-
-    int conteur = 0;
-    item* currentItem = HashTable[index];
-
-    while (currentItem != NULL) {
-        currentItem = currentItem -> next;
-        conteur++;
-    }
-    return conteur;
-}
 
 int hash1::nombreItems(int index) {
 
