@@ -25,8 +25,8 @@ class hash1{
         // les fonctions à developper
 
 
-        //void ajouterItem(string nom, string tel);
-        void afficherItem();
+        void ajouterItems(string nom, string tel);
+        void afficherItems();
 
         //int  nombreItems(int index);
         void afficherItemsDansIndex(int index); // les items qui ont le même resultat de hashage et qui sont empilés

@@ -29,7 +29,7 @@ int hash1::HASH(string cle)
     return index;
 }
 //fct qui affiches tous les items
-void hash1::afficherItem(){
+void hash1::afficherItems(){
     for (int index=0;index< tailleTableau ;index++){
         afficherItemsDansIndex(index);
     }
