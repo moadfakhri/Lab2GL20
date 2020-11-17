@@ -28,8 +28,12 @@ int hash1::HASH(string cle)
 
     return index;
 }
+<<<<<<< Updated upstream
 //fct qui affiches tous les items
 void hash1::afficherItems(){
+=======
+void hash1::afficherItem(){
+>>>>>>> Stashed changes
     for (int index=0;index< tailleTableau ;index++){
         afficherItemsDansIndex(index);
     }
@@ -41,4 +45,19 @@ hash1::hash1(){
         HashTable[i]->tel = "vide";
         HashTable[i]->next = NULL;
      }
+<<<<<<< Updated upstream
+=======
+}
+
+int hash1::nombreItems(int index) {
+
+    int conteur = 0;
+    item* currentItem = HashTable[index];
+
+    while (currentItem != NULL) {
+        currentItem = currentItem -> next;
+        conteur++;
+    }
+    return conteur;
+>>>>>>> Stashed changes
 }
