@@ -31,7 +31,7 @@ int hash1::HASH(string cle)
 
 void ajouterItem(string nom, string tel)
 {
-    int index = Hash(nom);
+    int index = HASH(nom);
     item hashItem;
     hashItem.nom = nom;
     hashItem.tel = tel;
@@ -93,3 +93,25 @@ int hash1::nombreItems(int index) {
     }
     return conteur;
 }
+
+void hash1::chercherItem(string nom){
+            int h = HASH(nom);
+            bool b = false;
+            item* en = HashTable[h];
+            if (en != NULL){
+                while (en != NULL)
+                {
+                    if(en -> nom == nom){ b = true;}
+                    if (b)
+                    {
+                        cout << "Element trouvé";
+                        break;
+                    }
+                    en -> next;
+                }
+                if (!b)
+                {
+                    cout << "Element"<< nom << "non existant";
+                }   
+            }
+        }
