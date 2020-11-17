@@ -9,22 +9,16 @@ int hash1::HASH(string cle)
     int index;
     int hashage = 0;
 
-    cout << cle.length();
     //for sur le nombre de char de cle
-    for(int i = 0; i< cle.length(); i++)
+    for(auto c : cle)
     {
-        // pour chaque char je reccupere le code ascii et je l'ajoute a la somme
-        hashage = hashage + (int)cle[i];
-        cout << cle[i] << endl;
-        cout << hashage << endl;
+        hashage += c;
     }
 
     // modulo de la sommme des codes ascii sur tailleTableau
 
     index = hashage % tailleTableau;
 
-    //index = 0;
-    cout << index << endl;
 
     return index;
 }
@@ -36,4 +30,14 @@ hash1::hash1(){
         HashTable[i]->tel = "vide";
         HashTable[i]->next = NULL;
      }
+}
+
+void hash1::afficherItemsDansIndex(int index)
+{
+    auto current_item = HashTable[index]->next;
+    while (current_item != NULL)
+    {
+        cout << "Nom : " << current_item->nom << " "<< "Tel : " << current_item->tel << endl;
+        current_item = current_item->next;
+    }
 }
