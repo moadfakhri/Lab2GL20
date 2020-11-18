@@ -23,7 +23,7 @@ int hash1::HASH(string cle)
     return index;
 }
 
-void ajouterItem(string nom, string tel)
+void hash1::ajouterItem(string nom, string tel)
 {
     int index = HASH(nom);
     item hashItem;
@@ -105,6 +105,6 @@ void hash1::chercherItem(string nom){
                 if (!b)
                 {
                     cout << "Element"<< nom << "non existant";
-                }   
+                }
             }
         }
