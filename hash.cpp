@@ -108,3 +108,22 @@ void hash1::chercherItem(string nom){
                 }
             }
         }
+
+void hash1::supprimerItem(string nom){
+
+    int index = HASH(nom);
+    item* currentItem = HashTable[index];
+    item* previousItem = HashTable[index];
+
+    while (currentItem != NULL) {
+
+        if (currentItem ->nom == nom) {
+            previousItem ->next = currentItem ->next;
+            free(currentItem);
+            cout << "elt supprime!" << endl;
+        }
+
+        previousItem = currentItem;
+        currentItem = currentItem ->next;
+    }
+}
